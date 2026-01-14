@@ -66,6 +66,39 @@ The ParkLogic project was developed by:
 - Adil Elbahlouli
 
 ---
+## My Contributions – Interface Designer (UX, UI & Configuration)
+
+**Role:** Interface Designer (UX, Menu & Configuration)  
+**Scope:** Visualization layer, user interaction, menu flow, and simulation configuration.
+
+### Responsibilities
+- Designed and implemented the main menu flow and simulation configuration
+- Managed user-defined simulation parameters via `MapConfig`
+- Built the in-game HUD and real-time dashboard
+- Implemented interactive UI components using an event-driven approach
+
+### Key Components & Files
+- **Main Menu**
+  - `src/scenes/MainMenuScene.cpp / .hpp`
+  - Renders configuration sliders and the "Start Simulation" button
+  - Builds the `MapConfig` struct and dispatches `GenerateWorldEvent`
+
+- **Configuration**
+  - `include/config.hpp`
+  - Defined and managed the `MapConfig` data structure
+
+- **HUD & Dashboard**
+  - `src/ui/GameHUD.cpp / .hpp`
+  - Instantiates `DashboardOverlay` and UI controls (Spawn Car, Speed)
+  - `src/ui/DashboardOverlay.cpp / .hpp`
+  - Renders live simulation data (occupancy, car state)
+  - Subscribes to `EntitySelectedEvent` for efficient UI updates
+
+- **UI Interaction System**
+  - `src/ui/UIButton.cpp / .hpp`
+  - Handles hover and click states via mouse events
+  - `src/ui/UIManager.hpp`
+  - Centralized update/draw management for UI elements
 
 ## Technology Stack
 
